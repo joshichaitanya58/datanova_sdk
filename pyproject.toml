@@ -1,0 +1,132 @@
+[build-system]
+requires = [
+    "setuptools>=68.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "datanova-sdk"
+version = "1.1.0"
+
+description = "Official Python SDK for DataNova Smart Analytics Platform REST APIs"
+
+readme = "README.md"
+
+# Supports Python 3.8 and all newer Python 3.x versions
+requires-python = ">=3.8"
+
+authors = [
+    { name = "DataNova Team" }
+]
+
+license = "MIT"
+license-files = ["LICENSE"]
+
+keywords = [
+    "analytics",
+    "machine-learning",
+    "data-science",
+    "datanova",
+    "sdk",
+    "rest-api",
+    "data-analytics",
+    "artificial-intelligence",
+    "business-intelligence",
+    "data-visualization",
+    "automated-analytics"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+
+    "Operating System :: OS Independent",
+
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+
+# =========================================================
+# REQUIRED RUNTIME DEPENDENCIES
+# =========================================================
+
+dependencies = [
+    "requests>=2.25.0",
+    "urllib3>=1.26.0"
+]
+
+
+# =========================================================
+# OPTIONAL DEPENDENCIES
+# =========================================================
+
+[project.optional-dependencies]
+
+# Install async support with:
+# pip install "datanova-sdk[async]"
+async = [
+    "httpx>=0.20.0"
+]
+
+# Development/testing dependencies
+# pip install "datanova-sdk[dev]"
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.20.0",
+    "responses>=0.20.0",
+    "httpx>=0.20.0",
+    "build>=1.0.0",
+    "twine>=4.0.0"
+]
+
+
+# =========================================================
+# PROJECT URLS
+# =========================================================
+
+[project.urls]
+
+Homepage = "https://datanova-fude.onrender.com"
+
+Repository = "https://github.com/joshichaitanya58/datanova"
+
+Documentation = "https://datanova-fude.onrender.com"
+
+
+# =========================================================
+# PACKAGE DISCOVERY
+# =========================================================
+
+[tool.setuptools.packages.find]
+
+include = [
+    "datanova",
+    "datanova.*"
+]
+
+exclude = [
+    "tests",
+    "tests.*"
+]
+
+
+# =========================================================
+# PYTEST CONFIGURATION
+# =========================================================
+
+[tool.pytest.ini_options]
+
+testpaths = [
+    "tests"
+]
+
+addopts = "-ra"
+
+asyncio_mode = "auto"
