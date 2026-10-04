@@ -1503,8 +1503,8 @@ This generates:
 
 ```text
 dist/
-├── datanova_sdk-1.1.0-py3-none-any.whl
-└── datanova_sdk-1.1.0.tar.gz
+├── datanova_sdk-1.1.1-py3-none-any.whl
+└── datanova_sdk-1.1.1.tar.gz
 ```
 
 ---
@@ -1590,7 +1590,7 @@ a new one.
 Current SDK version:
 
 ```text
-1.1.0
+1.1.1
 ```
 
 Check it programmatically:

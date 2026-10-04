@@ -1,11 +1,23 @@
 """
 DataNova Python SDK
 Official client library for the DataNova Smart Analytics Platform REST API.
+
+Provides synchronous and asynchronous clients for interacting with
+the DataNova REST API.
 """
 
-from .client import DataNovaClient, DataNovaAPIError
-from .async_client import AsyncDataNovaClient
+from .client import DataNovaAPIError, DataNovaClient, __version__
 
-__version__ = "1.0.0"
-__all__ = ["DataNovaClient", "AsyncDataNovaClient", "DataNovaAPIError", "__version__"]
+# Async client is an optional capability. The async_client module itself
+# handles the optional httpx dependency.
+try:
+    from .async_client import AsyncDataNovaClient
+except ImportError:  # pragma: no cover
+    AsyncDataNovaClient = None
 
+__all__ = [
+    "DataNovaClient",
+    "AsyncDataNovaClient",
+    "DataNovaAPIError",
+    "__version__",
+]

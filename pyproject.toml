@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "datanova-sdk"
-version = "1.1.0"
+version = "1.1.1"
 
 description = "Official Python SDK for DataNova Smart Analytics Platform REST APIs"
 
@@ -97,7 +97,7 @@ Homepage = "https://datanova-fude.onrender.com"
 
 Repository = "https://github.com/joshichaitanya58/datanova"
 
-Documentation = "https://datanova-fude.onrender.com"
+Documentation = "https://github.com/joshichaitanya58/datanova_sdk"
 
 
 # =========================================================
